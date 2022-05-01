@@ -49,6 +49,7 @@
             <Label Content="Subtitle &#xD;&#xA;Mode" HorizontalAlignment="Center" Margin="0,313,0,0" VerticalAlignment="Top" FontSize="24"/>
             <Label Content="Transcription &#xD;&#xA;Mode" HorizontalAlignment="Left" Margin="423,313,0,0" VerticalAlignment="Top" FontSize="24"/>
             <Button x:Name="Speech_Settings" Content="Speech Help" HorizontalAlignment="Left" Margin="498,52,0,0" VerticalAlignment="Top" Click="Speech_Settings_Click"/>
+            <Button x:Name="Connect_Motioninput" Content="Connect MotionInput " HorizontalAlignment="Left" Margin="364,52,0,0" VerticalAlignment="Top" Click="Connect_Motioninput_Click"/>
 
 
         </Grid>

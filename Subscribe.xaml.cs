@@ -24,6 +24,7 @@ namespace WpfFunReader
     {
         MainWindow _window;
 
+        string default_size = "16";
         public Subscribe(MainWindow window)
         {
             InitializeComponent();
@@ -59,6 +60,9 @@ namespace WpfFunReader
 
                 Console.WriteLine(location_of_models);
 
+                Console.WriteLine(default_size);
+
+
                 string function = Application.Current.Properties["Function"].ToString();
 
                 Console.WriteLine("THIS ISSSSSS");
@@ -66,15 +70,41 @@ namespace WpfFunReader
                 //configuring the process start info class
                 //string location_of_vosk = @"C:\Users\karus\Documents\Final Year\FYP\Sam - Askkita and sphinx integration\Ask-kita-poc\models\vosk";//System.IO.Path.GetFullPath(System.IO.Path.Combine(startup_directory, @"funReaders/models/vosk")); //
                 exe_process.StartInfo.FileName = path_to_exe;//@"C:\Users\karus\Documents\Final Year\FYP\Sam - Askkita and sphinx integration\Ask-kita-poc\dist\funReaders.exe";
-                exe_process.StartInfo.Arguments = $" \"{language}\" \"{model}\" \"subtitle\" \"{location_of_models}\"";
-                exe_process.StartInfo.UseShellExecute = true;
-                //exe_process.StartInfo.RedirectStandardOutput = true;
+                exe_process.StartInfo.Arguments = $" \"{language}\" \"{model}\" \"subtitle\" \"{location_of_models}\" \"{default_size}\"";
+                exe_process.StartInfo.UseShellExecute = false;
+                //exe_process.StartInfo.CreateNoWindow = true;
+                exe_process.StartInfo.RedirectStandardOutput = true;
 
                 // Set gui to a "waiting state" whilst starting up python process
 
                 exe_process.Start();
                 exe_process.WaitForExit();
             }
+
+        }
+
+
+
+        private void Font_size_drop_down_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //default_size = Font_size_drop_down.SelectedValue.Content.toString();
+            var item = (ComboBoxItem)Font_size_drop_down.SelectedValue;
+            default_size = (string)item.Content;
+
+
+            if (default_size =="14")
+            {
+                Console.WriteLine("Something hath changed");
+            }
+            else
+            {
+                Console.WriteLine("Something unexpected is happening");
+                Console.WriteLine(default_size);
+            }
+             
+
+
+            
 
         }
     }

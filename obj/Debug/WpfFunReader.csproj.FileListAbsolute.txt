@@ -43,3 +43,5 @@ C:\Users\karus\Documents\Final Year\FYP\GUI\Trial 2\WpfFunReader\obj\Debug\Speec
 C:\Users\karus\Documents\Final Year\FYP\GUI\Trial 2\WpfFunReader\obj\Debug\SpeechServicesHomePage.baml
 C:\Users\karus\Documents\Final Year\FYP\GUI\Trial 2\WpfFunReader\obj\Debug\AskKITASettingsPage.g.cs
 C:\Users\karus\Documents\Final Year\FYP\GUI\Trial 2\WpfFunReader\obj\Debug\AskKITASettingsPage.baml
+C:\Users\karus\Documents\Final Year\FYP\GUI\Trial 2\WpfFunReader\obj\Debug\Connect2MI.g.cs
+C:\Users\karus\Documents\Final Year\FYP\GUI\Trial 2\WpfFunReader\obj\Debug\Connect2MI.baml

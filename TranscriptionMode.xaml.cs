@@ -73,9 +73,10 @@ namespace WpfFunReader
                 //configuring the process start info class
                 //string location_of_vosk = @"C:\Users\karus\Documents\Final Year\FYP\Sam - Askkita and sphinx integration\Ask-kita-poc\models\vosk";//System.IO.Path.GetFullPath(System.IO.Path.Combine(startup_directory, @"funReaders/models/vosk")); //
                 exe_process.StartInfo.FileName = path_to_exe;//@"C:\Users\karus\Documents\Final Year\FYP\Sam - Askkita and sphinx integration\Ask-kita-poc\dist\funReaders.exe";
-                exe_process.StartInfo.Arguments = $" \"{language}\" \"{model}\" \"transcribe\" \"{location_of_models}\"";
-                exe_process.StartInfo.UseShellExecute = true;
-                //exe_process.StartInfo.RedirectStandardOutput = true;
+                exe_process.StartInfo.Arguments = $" \"{language}\" \"{model}\" \"transcribe\" \"{location_of_models}\" \"16\"";
+                exe_process.StartInfo.UseShellExecute = false;
+                //exe_process.StartInfo.CreateNoWindow = true;
+                exe_process.StartInfo.RedirectStandardOutput = true;
 
                 // Set gui to a "waiting state" whilst starting up python process
 

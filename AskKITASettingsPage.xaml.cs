@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Path = System.IO.Path;
+
 
 namespace WpfFunReader
 {
@@ -36,31 +39,20 @@ namespace WpfFunReader
             if (model == "vosk")
             {
                 modelDropDown.SelectedIndex = 0;
+                LanguageDropDown.SelectedValue = language;
 
-                if (language == "en-US")
-                {
-                    LanguageDropDown.SelectedValue = "English";
-                }
-                if (language == "es-SP")
-                {
-                    LanguageDropDown.SelectedValue = "Spanish";
-                }
-                if (language == "de-GE")
-                {
-                    LanguageDropDown.SelectedValue = "German";
-                }
+                //if (language == "English(US)")
+                //{
+                    //LanguageDropDown.SelectedValue = "English(US)";
+                //}
+                
+
             }
             if (model == "sphinx")
             {
                 modelDropDown.SelectedIndex = 1;
-                if (language == "en-US")
-                {
-                    LanguageDropDown.SelectedValue = "English";
-                }
-                if (language == "ta-TA")
-                {
-                    LanguageDropDown.SelectedValue = "Tamil";
-                }
+                LanguageDropDown.SelectedValue = language;
+                    
             }
             //change_LanguageDropDown_items();
         }
@@ -72,39 +64,89 @@ namespace WpfFunReader
             {
                 return;
             }
-            if (LanguageDropDown.SelectedValue.ToString() == "English")
-            {
-                Application.Current.Properties["AskKITA_langauge"] = "en-US";
-            }
-            if (LanguageDropDown.SelectedValue.ToString() == "Spanish")
-            {
-                Application.Current.Properties["AskKITA_langauge"] = "es-SP";
-            }
-            if (LanguageDropDown.SelectedValue.ToString() == "German")
-            {
-                Application.Current.Properties["AskKITA_langauge"] = "de-GE";
-            }
-            if (LanguageDropDown.SelectedValue.ToString() == "Tamil")
-            {
-                Application.Current.Properties["AskKITA_langauge"] = "ta-TA";
-            }
+            Application.Current.Properties["AskKITA_langauge"] = LanguageDropDown.SelectedValue.ToString();
+
+            //if (LanguageDropDown.SelectedValue.ToString() == "English(US)")
+            //{
+              //  Application.Current.Properties["AskKITA_langauge"] = "English(US)";
+            //}
+            
+            
         }
 
         private void change_LanguageDropDown_items()
         {
-            if (model == "vosk")
+            string sub_directory = @"funReaders/models/" + model + "/";
+
+
+            string startup_directory = Directory.GetCurrentDirectory();
+
+            LanguageDropDown.Items.Clear();
+            string path_to_models = System.IO.Path.GetFullPath(System.IO.Path.Combine(startup_directory, sub_directory));
+            Console.WriteLine(path_to_models);
+            string[] filePaths = Directory.GetDirectories(path_to_models, "*", SearchOption.TopDirectoryOnly);
+            Console.WriteLine(filePaths);
+            
+            Console.WriteLine(sub_directory);
+
+            //if (model == "vosk")
+            //{
+
+                
+
+
+
+
+
+              //  LanguageDropDown.Items.Add("English(US)");
+                //LanguageDropDown.Items.Add("German");
+                //LanguageDropDown.Items.Add("Spanish");
+                //LanguageDropDown.Items.Add("French");
+                //LanguageDropDown.Items.Add("Arabic");
+                //LanguageDropDown.Items.Add("Chinese");
+                //LanguageDropDown.Items.Add("Hindi");
+
+
+
+            //}
+            //if (model == "sphinx")
+            //{
+              //  LanguageDropDown.Items.Clear();
+
+               
+                //LanguageDropDown.Items.Add("English(US)");
+                //LanguageDropDown.Items.Add("Tamil");
+            //}
+
+            int index = 0;
+            int english_index = -1;
+            foreach (string filePath in filePaths)
             {
-                LanguageDropDown.Items.Clear();
-                LanguageDropDown.Items.Add("English");
-                LanguageDropDown.Items.Add("German");
-                LanguageDropDown.Items.Add("Spanish");
+
+
+                Console.WriteLine("Hmm");
+                Console.WriteLine(filePath);
+
+                string[] found  = filePath.Split('\\');
+                int length = found.Length;
+                string lang_found = found[length - 1];
+                if (filePath == "English(US)")
+                {
+                    english_index = index;
+                }
+
+
+                LanguageDropDown.Items.Add(lang_found);
+
+
+
+
+
+                index++;
+
             }
-            if (model == "sphinx")
-            {
-                LanguageDropDown.Items.Clear();
-                LanguageDropDown.Items.Add("English");
-                LanguageDropDown.Items.Add("Tamil");
-            }
+            LanguageDropDown.SelectedIndex = english_index;
+
 
         }
         private void modelDropDown_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -14,13 +14,13 @@
             <Image Source ="./images/transcription_img.png" HorizontalAlignment="Center" Height="98" VerticalAlignment="Center" Width="122"/>
         </Border>
         <Button x:Name="btn_back" Content="Back" HorizontalAlignment="Left" Margin="44,309,0,0" VerticalAlignment="Top" Click="btn_back_Click" FontSize="18" Width="90" Height="37"/>
-        <Button x:Name="btn_start_transcribing"  Background="{x:Null}" BorderThickness="0" HorizontalAlignment="Left" Margin="333,79,0,0" VerticalAlignment="Top" FontSize="45" Click="btn_start_reading_Click">
+        <Button x:Name="btn_start_transcribing"  Background="{x:Null}" BorderThickness="0" HorizontalAlignment="Left" Margin="327,281,0,0" VerticalAlignment="Top" FontSize="45" Click="btn_start_reading_Click">
             <Image  Source="./images/start_button.png" Height="95" Width="98"/>
         </Button>
         <Label Content="Transcription Mode" HorizontalAlignment="Left" Margin="165,14,0,0" VerticalAlignment="Top" FontSize="44" Width="391"/>
-        <Label Content="Welcome to Transcription Mode!" HorizontalAlignment="Left" Margin="44,0,0,0" VerticalAlignment="Center" Height="42" Width="355" FontSize="24" RenderTransformOrigin="0.481,-0.008"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,221,0,0" TextWrapping="Wrap" Text="Press start and navigate to a word/note taking document. The words that are spoken will be typed up. " VerticalAlignment="Top" FontSize="22" Width="512"/>
-        <Label Content="Let's Start" HorizontalAlignment="Left" Margin="438,93,0,0" VerticalAlignment="Top" FontSize="28" Foreground="#FF1F7A20"/>
+        <Label Content="Welcome to Transcription Mode!" HorizontalAlignment="Left" Margin="207,108,0,0" VerticalAlignment="Top" Height="42" Width="355" FontSize="24" RenderTransformOrigin="0.481,-0.008"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,0,0,0" TextWrapping="Wrap" Text="Press start and navigate to a word/note taking document. The words that are spoken will be typed up. " VerticalAlignment="Center" FontSize="22" Width="512"/>
+        <Label Content="Let's Start" HorizontalAlignment="Left" Margin="432,299,0,0" VerticalAlignment="Top" FontSize="28" Foreground="#FF1F7A20"/>
 
     </Grid>
 </Page>

@@ -16,25 +16,18 @@ using System.Windows.Shapes;
 namespace WpfFunReader
 {
     /// <summary>
-    /// Interaction logic for SpeechServicesHomePage.xaml
+    /// Interaction logic for Connect2MI.xaml
     /// </summary>
-    public partial class SpeechServicesHomePage : Page
+    public partial class Connect2MI : Page
     {
         MainWindow _window;
-        public SpeechServicesHomePage(MainWindow window)
+        public Connect2MI(MainWindow window)
         {
             _window = window;
             InitializeComponent();
         }
 
-       
-
-        private void AskKITA_Click(object sender, RoutedEventArgs e)
-        {
-            _window.Content = new AskKITASettingsPage(_window);
-        }
-
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private void Back_Click(object sender, RoutedEventArgs e)
         {
             _window.Content = new Home(_window);
         }

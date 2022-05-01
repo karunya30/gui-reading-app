@@ -35,7 +35,7 @@ namespace WpfFunReader
 
             //below are the default settings for the ASK-Kita functionality
             Application.Current.Properties["AskKITA_model"] = "vosk";
-            Application.Current.Properties["AskKITA_langauge"] = "en-US";
+            Application.Current.Properties["AskKITA_langauge"] = "English(US)";
 
             //
             Application.Current.Properties["UseReadThisForMe"] = false;

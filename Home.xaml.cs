@@ -50,5 +50,10 @@ namespace WpfFunReader
         {
             _window.Content = new SpeechServicesHomePage(_window);
         }
+
+        private void Connect_Motioninput_Click(object sender, RoutedEventArgs e)
+        {
+            _window.Content = new Connect2MI(_window);
+        }
     }
 }

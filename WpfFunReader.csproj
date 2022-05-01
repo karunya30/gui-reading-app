@@ -79,6 +79,9 @@
     <Compile Include="AskKITASettingsPage.xaml.cs">
       <DependentUpon>AskKITASettingsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Connect2MI.xaml.cs">
+      <DependentUpon>Connect2MI.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
@@ -98,6 +101,10 @@
       <DependentUpon>TranscriptionMode.xaml</DependentUpon>
     </Compile>
     <Page Include="AskKITASettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Connect2MI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -16,12 +16,12 @@
 
 
             <Button x:Name="btn_back" Content="Back" HorizontalAlignment="Left" Margin="56,314,0,0" VerticalAlignment="Top" Click="btn_back_Click" FontSize="18" Width="106" Height="35"/>
-            <Button x:Name="btn_start_reading"  HorizontalAlignment="Left" Margin="333,79,0,0" VerticalAlignment="Top" FontSize="45" Click="btn_start_reading_Click" Background="{x:Null}" BorderThickness="0">
+            <Button x:Name="btn_start_reading"  HorizontalAlignment="Left" Margin="338,280,0,0" VerticalAlignment="Top" FontSize="45" Click="btn_start_reading_Click" Background="{x:Null}" BorderThickness="0">
                 <Image  Source="./images/start_button.png" Height="95" Width="98"/>
             </Button>
-            <Label Content="Let's Start" HorizontalAlignment="Left" Margin="438,93,0,0" VerticalAlignment="Top" FontSize="28" Foreground="#FF1F7A20"/>
-            <Label Content="Welcome to Reading Mode!" HorizontalAlignment="Left" Margin="76,176,0,0" VerticalAlignment="Top" Height="42" Width="307" FontSize="24" RenderTransformOrigin="0.481,-0.008"/>
-            <TextBlock HorizontalAlignment="Left" Margin="56,221,0,0" TextWrapping="Wrap" Text="Press start and navigate to the page you are reading from. Read aloud and watch the words change colour as you read." VerticalAlignment="Top" FontSize="22" Width="512"/>
+            <Label Content="Let's Start" HorizontalAlignment="Left" Margin="438,314,0,0" VerticalAlignment="Top" FontSize="28" Foreground="#FF1F7A20"/>
+            <Label Content="Welcome to Reading Mode!" HorizontalAlignment="Left" Margin="261,109,0,0" VerticalAlignment="Top" Height="42" Width="307" FontSize="24" RenderTransformOrigin="0.481,-0.008"/>
+            <TextBlock HorizontalAlignment="Left" Margin="56,0,0,0" TextWrapping="Wrap" Text="Press start and navigate to the page you are reading from. Read aloud and watch the words change colour as you read." VerticalAlignment="Center" FontSize="22" Width="512"/>
 
 
         </Grid>
